@@ -1,0 +1,16 @@
+#include <IRremote.h>
+
+IRsend irsend;
+
+void setup()
+{
+  pinMode(3, OUTPUT);  
+}
+
+void loop() { 
+  
+  irsend.sendSony(0xa90, 12); // 发送三次信号0xA90
+ delay(10);//延迟10ms，时间较短，对于移动速度快的宠物更加灵敏
+    
+  
+}
